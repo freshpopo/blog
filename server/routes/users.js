@@ -1,5 +1,6 @@
 import express from 'express';
 import {User} from "../models/User.js";
+import { auth } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -48,6 +49,31 @@ router.post('/login', (req, res) => {
     .catch((err) => {
       return res.status(400).send(err);
     })
+})
+
+router.get('/auth', auth , (req, res) => {
+  res.status(200).json({
+    _id: req.user._id,
+    isAdmin: req.user.role === 1,
+    isAuth: true,
+    email: req.user.email,
+    name: req.user.name,
+    role: req.user.role,
+    image: req.user.image
+  })
+})
+
+router.get('/logout', auth, (req, res) => {
+  User.findOneAndUpdate(
+    { _id: req.user._id},
+    {token: ""}
+  ).then(() => {
+    return res.status(200).send({
+      success: true
+    })
+  }).catch((err) => {
+    res.json({success: false, err})
+  })
 })
 
 export default router;
