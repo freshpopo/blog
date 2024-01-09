@@ -1,0 +1,109 @@
+@import '../variables/variables';
+
+@include keyHologramHorizonMove;
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: $header-height-lg;
+  border-top: 1px solid $cream-100;
+  border-bottom: 1px solid $cream-100;
+  font-family: $font-family-en;
+  font-weight: 800;
+  background: $cream-1000;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 100%;
+  border: none;
+  font-size: 24px;
+  background-color: $cream-100;
+  &:hover {
+    span {
+      color: transparent;
+    }
+  }
+  span {
+    margin-right: 4px;
+    color: $cream-1000;
+    transition: all $transition-time-default;
+    @include bgHologram('60deg');
+    -webkit-background-clip: text;
+    animation-name: hologramHorizonMove;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-duration: 5s;
+  }
+}
+.header-btn-wrap {
+  display: flex;
+}
+.header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: none;
+  border-left: 1px solid $cream-100;
+  color: $cream-100;
+  background: transparent;
+  transition: all $transition-time-default;
+  transition-property: color, background;
+  span, i {
+    display: block;
+    position: relative;
+    z-index: 1;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 100%;
+      height: 12px;
+      @include bgHologram('to right');
+      opacity: 0;
+      transition: opacity $transition-time-default;
+    }
+  }
+  &:hover {
+    color: $cream-1000;
+    @include bgHologram('60deg');
+    animation-name: hologramHorizonMove;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-duration: 5s;
+  }
+  &.active {
+    span:after, i:after {
+      opacity: 1;
+      animation-name: hologramHorizonMove;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+      animation-duration: 20s;
+    }
+  }
+
+  &.text {
+    width: 240px;
+    padding: 0 12px;
+  }
+  &.icon {
+    width: $header-height-lg;
+    font-size: 20px;
+    &:last-child {
+      border-right: 1px solid $cream-100;
+    }
+  }
+}

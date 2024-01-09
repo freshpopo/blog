@@ -1,0 +1,71 @@
+@import '../variables/variables';
+
+$gutter-default: 10px;
+
+@mixin make-row($gutter: $gutter-default) {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -#{$gutter};
+}
+
+@mixin make-col-width($columns, $col, $gutter: $gutter-default) {
+  width: calc(100% / #{$columns} * #{$col});
+  padding: $gutter;
+}
+
+@mixin make-col($gutter: $gutter-default, $columns: 12) {
+  .col {
+    flex-grow: 1;
+    padding: $gutter;
+  }
+  .col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    padding: $gutter;
+  }
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: calc(100% / #{$columns} * #{$i});
+      padding: $gutter;
+    }
+  }
+  $breakWidths: map-values($breakpoint);
+  @each $key, $breakWidth in $breakpoint {
+    $i: index($breakpoint, $key $breakWidth);
+    @if $i == 1 {
+      @media (max-width: $breakWidth) {
+        @for $j from 1 through $columns {
+          .col-#{$key}-#{$j} {
+            @include make-col-width($columns, $j, $gutter);
+          }
+        }
+      }
+    } @else if $i == length($breakpoint) {
+      @media (min-width: $breakWidth + 1) {
+        @for $j from 1 through $columns {
+          .col-#{$key}-#{$j} {
+            @include make-col-width($columns, $j, $gutter);
+          }
+        }
+      }
+    } @else {
+      @media (min-width: nth($breakWidths, $i - 1) + 1) and (max-width: $breakWidth) {
+        @for $j from 1 through $columns {
+          .col-#{$key}-#{$j} {
+            @include make-col-width($columns, $j, $gutter);
+          }
+        }
+      }
+    }
+  }
+}
+
+.row {
+  @include make-row;
+}
+@include make-col;
+
+.row-10 {
+  @include make-row;
+  @include make-col($gutter-default, 10);
+}

@@ -1,0 +1,37 @@
+html, body {
+  height: 100%;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container {
+  flex-grow: 1;
+}
+.section {
+  &.content {
+    max-width: calc(#{$content-xxl} + (#{$content-pd-xl} * 2));
+    padding: 0 $content-pd-xl;
+    margin: 0 auto;
+  }
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 60px 0 40px;
+  > * {
+    margin-left: 12px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.section-header-title {
+  font-family: $font-family-en;
+  font-size: 24px;
+  font-weight: 800;
+}
+.section-header-desc {
+  color: $cream-400;
+}

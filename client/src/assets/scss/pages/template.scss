@@ -1,0 +1,73 @@
+@import '../variables/variables';
+
+.template-nav {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: -24px;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 1px;
+    background: $cream-400;
+  }
+}
+.template-nav-item {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 10px 12px;
+  font-family: $font-family-en;
+  color: $cream-300;
+  transition: all $transition-time-default;
+  transition-property: color;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 1px;
+    background: $cream-400;
+    transition: all $transition-time-default;
+    transition-property: height, background;
+  }
+  &:hover {
+    color: $cream-100;
+  }
+  &.active {
+    color: $cream-100;
+    font-weight: 800;
+    &:before {
+      height: 3px;
+      @include bgHologram(90deg, 100%);
+    }
+  }
+}
+// template content
+.template-section.content {
+  padding-top: 32px;
+  padding-bottom: 80px;
+}
+.template-title {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-family: $font-family-en;
+  font-size: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+h3.template-title {
+  font-size: 16px;
+  h2 + & {
+    margin-top: 20px;
+  }
+}

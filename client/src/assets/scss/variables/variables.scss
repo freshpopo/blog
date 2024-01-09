@@ -1,0 +1,7 @@
+@import 'colors';
+@import 'font';
+@import 'sizes';
+@import 'etc';
+
+// mixin 내에서도 변수를 사용할 가능성이 높기에, variables 에 포함함.
+@import 'mixin';

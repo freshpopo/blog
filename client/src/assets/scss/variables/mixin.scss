@@ -1,0 +1,29 @@
+// mixin
+@mixin bgHologram($direction, $size: 500%) {
+  background: linear-gradient(#{$direction}, $hologram-100 0%, $hologram-200 25%, $cream-100 45%, $hologram-300 65%, $hologram-400 80%, $hologram-500 100%);
+  background-size: $size;
+}
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin ellipsisMulti($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+// keyframes
+@mixin keyHologramHorizonMove() {
+  @keyframes hologramHorizonMove {
+    0% {
+      background-position: 0 center;
+    }
+    100% {
+      background-position: 100% center;
+    }
+  }
+}

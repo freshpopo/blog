@@ -1,0 +1,102 @@
+@import '../../variables/variables';
+
+.blog-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  padding: 28px;
+  border: 1px solid $cream-400;
+  border-radius: $border-radius-lg;
+  color: $cream-300;
+  transition: border $transition-time-lg;
+  .tag-list {
+    padding-top: 12px;
+  }
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 120px;
+    height: 80px;
+    @include bgHologram(-45deg, 100%);
+    transform: rotateZ(-45deg);
+    transition: all $transition-time-lg;
+    transition-property: top, bottom, left, right;
+  }
+  &:before {
+    top: -70px;
+    left: -90px;
+  }
+  &:after {
+    bottom: -70px;
+    right: -90px;
+  }
+  &:hover {
+    border-color: $cream-100;
+    &:before {
+      top: -40px;
+      left: -56px;
+    }
+    &:after {
+      bottom: -40px;
+      right: -56px;
+    }
+  }
+}
+.bli-info {
+  flex-grow: 1;
+}
+.bli-title {
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: $cream-100;
+  &.sub {
+    margin-top: 8px;
+    font-size: 16px;
+    color: $cream-300;
+  }
+}
+.bli-date {
+  font-family: $font-family-en;
+  font-size: 12px;
+}
+.bli-desc {
+  padding-top: 24px;
+  font-size: 14px;
+  line-height: 1.4;
+  @include ellipsisMulti(2);
+}
+
+// type small
+.blog-list-item.small {
+  display: block;
+  padding: 20px;
+  .bli-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .tag-list {
+    padding-top: 0;
+  }
+  .bli-title {
+    overflow: hidden;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &:hover {
+    border-color: $cream-100;
+    &:before {
+      top: -52px;
+      left: -60px;
+    }
+    &:after {
+      bottom: -52px;
+      right: -60px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-over: 1920px;
+
+$breakpoint: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl,
+  over: $breakpoint-over,
+);
+
+// home content max width
+$content-sm: 540px;
+$content-md: 720px;
+$content-lg: 960px;
+$content-xl: 1140px;
+$content-xxl: 1320px;
+
+// board content max width
+$content-list: 1000px;
+$content-detail: 860px;
+
+// content padding
+$content-pd-sm: 20px;
+$content-pd-md: 24px;
+$content-pd-lg: 32px;
+$content-pd-xl: 40px;
+
+// header height
+$header-height-lg: 50px;
+
+
+// form (input, button) height
+$form-height-xs: 24px;
+$form-height-sm: 36px;
+$form-height-md: 44px;
+$form-height-lg: 56px;
+$form-height-xl: 72px;
+
+// form (input, button) padding
+$form-pd-xs: 10px;
+$form-pd-sm: 14px;
+$form-pd-md: 16px;
+$form-pd-lg: 20px;
+$form-pd-xl: 26px;
