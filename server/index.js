@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/api/hello', (req, res) => {
+  res.send('hello. cors 이슈 관련 proxy 설정 테스트');
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
 })
