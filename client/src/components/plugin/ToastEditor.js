@@ -14,6 +14,7 @@ import codeSyntaxHighlight from "@toast-ui/editor-plugin-code-syntax-highlight";
 import "assets/scss/plugin/editor.scss";
 
 const ToastEditor = ({viewer, content, editorRef}) => {
+  // eslint-disable-next-line
   let [initContent, setInitContent] = useState(content);
   const colorSyntaxOptions = {
     preset: [

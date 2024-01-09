@@ -37,7 +37,7 @@ const BlogListPage = () => {
           <Diamond></Diamond>
           <span className="section-header-desc">차근차근 만들어가는 지식들</span>
           <div className="spacer"></div>
-          <NavLink to="edit" className="btn-text-link">Write</NavLink>
+          <NavLink to="create" className="btn-text-link">Write</NavLink>
         </div>
         <ul className="tag-list">
           {

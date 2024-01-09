@@ -4,7 +4,7 @@ import {Badge, Diamond} from "components/common";
 import ToastEditor from "../../components/plugin/ToastEditor";
 import BlogListItem from "../../components/blog/BlogListItem";
 
-const BlogDetail = () => {
+const BlogDetailPage = () => {
   let initContent = '';
   let list = [];
   let tagItems = [];
@@ -40,7 +40,7 @@ const BlogDetail = () => {
           <div className="blog-date">2023.11.09</div>
           <div className="spacer"></div>
           <button className="btn-text-link">Cancel</button>
-          <NavLink to="/blog/edit" className="btn-text-link">Save</NavLink>
+          <NavLink to="/blog/create" className="btn-text-link">Save</NavLink>
         </div>
         <h1 className="blog-detail-title">한글 제목을 주로 입력하겠죠. 영문은 CODA체로 입력 안 해요.</h1>
         <p className="blog-detail-desc">한글 제목을 주로 입력하겠죠. 영문은 CODA체로 입력 안 해요.</p>
@@ -75,4 +75,4 @@ const BlogDetail = () => {
   )
 }
 
-export default BlogDetail;
+export default BlogDetailPage;

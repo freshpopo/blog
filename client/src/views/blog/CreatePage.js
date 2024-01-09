@@ -3,7 +3,7 @@ import {Badge, Diamond, InputText} from "components/common";
 import ToastEditor from "../../components/plugin/ToastEditor";
 
 
-const BlogEdit = () => {
+const BlogCreatePage = () => {
   const editorRef = useRef(null);
   let initContent = '';
   return (
@@ -61,4 +61,4 @@ const BlogEdit = () => {
   )
 }
 
-export default BlogEdit;
+export default BlogCreatePage;

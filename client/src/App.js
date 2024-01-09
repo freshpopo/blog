@@ -11,6 +11,8 @@ import PortfolioPage from "views/portfolio";
 
 import BlogPage from "views/blog";
 import BlogListPage from "views/blog/ListPage";
+import BlogDetailPage from "views/blog/DetailPage";
+import BlogCreatePage from "views/blog/CreatePage";
 
 import TemplatePage from "views/template";
 import TemplateDiamondPage from "views/template/DiamondPage";
@@ -28,8 +30,8 @@ function App() {
           <Route path='/portfolio' element={<PortfolioPage/>}></Route>
           <Route path='/blog/*' element={<BlogPage/>}>
             <Route index element={<BlogListPage/>}></Route>
-            {/*<Route path='detail/*' element={<BlogDetail/>}/>*/}
-            {/*<Route path='create/*' element={<BlogCreate/>}></Route>*/}
+            <Route path='detail/*' element={<BlogDetailPage/>}/>
+            <Route path='create/*' element={<BlogCreatePage/>}></Route>
           </Route>
           <Route path='template/*' element={<TemplatePage/>}>
             <Route path='diamond' index element={<TemplateDiamondPage/>}></Route>
