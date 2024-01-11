@@ -28,7 +28,7 @@ const TemplatePage = () => {
       <div className="section content">
         <div className="section-header">
           <h1 className="section-header-title">UI Template</h1>
-          <Diamond></Diamond>
+          <Diamond size="small"></Diamond>
           <span className="section-header-desc">필요할 때 마다 추가됩니다.</span>
         </div>
         <nav className="template-nav">

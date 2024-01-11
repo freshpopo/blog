@@ -34,7 +34,7 @@ const BlogDetailPage = () => {
     <div className="section content content-blog-detail">
       <div className="blog-detail-header">
         <div className="blog-detail-deco">
-          <Diamond thickness="thin"></Diamond>
+          <Diamond size="small" thickness="thin"></Diamond>
         </div>
         <div className="blog-detail-action">
           <div className="blog-date">2023.11.09</div>
@@ -58,7 +58,7 @@ const BlogDetailPage = () => {
       </div>
       <div className="blog-detail-footer">
         <div className="blog-detail-deco">
-          <Diamond thickness="thin"></Diamond>
+          <Diamond size="small" thickness="thin"></Diamond>
         </div>
         <h2 className="bdf-title">블로그 다른 글</h2>
         <ul className="blog-list">

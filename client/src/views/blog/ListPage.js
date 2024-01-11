@@ -34,7 +34,7 @@ const BlogListPage = () => {
       <div className="section content">
         <div className="section-header">
           <h1 className="section-header-title">Blog</h1>
-          <Diamond></Diamond>
+          <Diamond size="small"></Diamond>
           <span className="section-header-desc">차근차근 만들어가는 지식들</span>
           <div className="spacer"></div>
           <NavLink to="create" className="btn-text-link">Write</NavLink>

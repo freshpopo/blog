@@ -10,7 +10,7 @@ const BlogCreatePage = () => {
     <div className="section content-blog-edit">
       <div className="section-header">
         <h1 className="section-header-title">Edit</h1>
-        <Diamond></Diamond>
+        <Diamond size="small"></Diamond>
         <div className="spacer"></div>
         <button className="btn-text-link">Cancel</button>
         <button className="btn-text-link">Save</button>

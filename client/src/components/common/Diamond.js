@@ -1,13 +1,14 @@
 import React from "react";
 import 'assets/scss/components/common/diamond.scss';
 
-const Diamond = ({type, size, active, thickness}) => {
+const Diamond = ({workType, size, active, thickness, filled}) => {
   let diamondClass =
     'diamond' +
-    (type ? ' ' + type : '') +
+    (workType ? ' ' + workType : '') +
     (size ? ' ' + size : '') +
     (active ? ' active' : '') +
-    (thickness ? ' ' + thickness : '');
+    (thickness ? ' ' + thickness : '') +
+    (filled ? ' filled' : '');
   return (
     <div
       className={diamondClass}

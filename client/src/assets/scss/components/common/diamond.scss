@@ -1,9 +1,11 @@
 @import '../../variables/variables';
 
-$diamond-md-w: 12px;
-$diamond-md-h: 17px;
-$diamond-lg-w: 20px;
-$diamond-lg-h: 30px;
+$diamond-sm-w: 12px;
+$diamond-sm-h: 17px;
+$diamond-md-w: 20px;
+$diamond-md-h: 30px;
+$diamond-lg-w: 32px;
+$diamond-lg-h: 54px;
 
 .diamond {
   display: flex;
@@ -16,67 +18,126 @@ $diamond-lg-h: 30px;
     fill: $cream-100;
     fill-opacity: 0.2;
     stroke: $cream-100;
-    stroke-width: 2px;
+    stroke-width: 1px;
     transition: all $transition-time-default;
-    transition-property: fill, stroke;
+    transition-property: fill, fill-opacity, stroke, stroke-width;
   }
   // type
   &.plan {
-    &.active, &:hover {
+    &.active, &.filled, &:hover {
       .diamond-path {
         fill: $warning;
         stroke: $warning;
       }
     }
+    &.active:hover {
+      .diamond-path {
+        fill-opacity: 1;
+      }
+    }
   }
   &.design {
-    &.active, &:hover {
+    &.active, &.filled, &:hover {
       .diamond-path {
         fill: $hologram-100;
         stroke: $hologram-100;
       }
     }
+    &.active:hover {
+      .diamond-path {
+        fill-opacity: 1;
+      }
+    }
   }
   &.publishing {
-    &.active, &:hover {
+    &.active, &.filled, &:hover {
       .diamond-path {
         fill: $secondary;
         stroke: $secondary;
       }
     }
+    &.active:hover {
+      .diamond-path {
+        fill-opacity: 1;
+      }
+    }
   }
   &.develop {
-    &.active, &:hover {
+    &.active, &.filled, &:hover {
       .diamond-path {
         fill: $primary;
         stroke: $primary;
       }
     }
+    &.active:hover {
+      .diamond-path {
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  // active
+  &.active {
+    cursor: pointer;
+    &:hover {
+      .diamond-path {
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  // filled
+  &.filled {
+    opacity: 0.7;
+    transition: all $transition-time-default;
+    transition-property: opacity;
+    cursor: pointer;
+    .diamond-path {
+      fill-opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+    }
   }
   // size
+  &.small {
+    svg {
+      width: $diamond-sm-w;
+      height: $diamond-sm-h;
+    }
+    .diamond-path {
+      stroke-width: 2px;
+    }
+    &.thin {
+      .diamond-path {
+        stroke-width: 1px;
+      }
+    }
+    &.large {
+      .diamond-path {
+        stroke-width: 3px;
+      }
+    }
+  }
   &.large {
     svg {
       width: $diamond-lg-w;
       height: $diamond-lg-h;
     }
     .diamond-path {
-      stroke-width: 1px;
+      stroke-width: 0.7px;
     }
   }
+
   // thickness
   &.thin {
     .diamond-path {
-      stroke-width: 1px;
-    }
-  }
-  &.medium {
-    .diamond-path {
-      stroke-width: 3px;
+      stroke-width: 0.5px;
     }
   }
   &.bold {
     .diamond-path {
-      stroke-width: 4px;
+      stroke-width: 2px;
     }
   }
 }
