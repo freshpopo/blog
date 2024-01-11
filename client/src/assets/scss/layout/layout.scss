@@ -16,6 +16,12 @@ html, body {
     margin: 0 auto;
   }
 }
+.section-inset {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
 .section-header {
   display: flex;
   align-items: center;

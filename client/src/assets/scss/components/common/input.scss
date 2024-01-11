@@ -32,6 +32,12 @@
   background: transparent;
   transition: all $transition-time-default;
   transition-property: border, background, opacity;
+  // background color
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $cream-100;
+    -webkit-box-shadow: 0 0 0 1000px $cream-1000 inset;
+    box-shadow: 0 0 0 1000px $cream-1000 inset;
+  }
   &:focus, &:focus-visible {
     outline: none;
     border-color: $cream-100 !important;

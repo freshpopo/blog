@@ -29,12 +29,12 @@
     opacity: 0;
     transition: opacity $transition-time-default;
   }
-  &:hover:not(:disabled), &:hover:not(.disabled) {
+  &:hover:not(:disabled):not(.disabled) {
     &:after {
       opacity: 0.2;
     }
   }
-  &:active:not(:disabled), &:active:not(.disabled) {
+  &:active:not(:disabled):not(.disabled) {
     &:after {
       opacity: 0.4;
     }
@@ -77,10 +77,10 @@
     &:after {
       display: none;
     }
-    &:hover:not(:disabled), &:hover:not(.disabled) {
+    &:hover:not(:disabled):not(.disabled) {
       opacity: 0.8;
     }
-    &:active:not(:disabled), &:active:not(.disabled) {
+    &:active:not(:disabled):not(.disabled) {
       opacity: 0.6;
     }
   }

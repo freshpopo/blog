@@ -2,7 +2,7 @@ import React from "react";
 import 'assets/scss/components/common/button.scss';
 import {emptyCheck} from "../../utils/utils";
 
-const Button = ({children, href, type, icon, rounded, size, color, disabled, ...props}) => {
+const Button = ({children, href, type, icon, rounded, size, color, disabled, block, ...props}) => {
   function childrenTag(item) {
     if (emptyCheck(item.props)) {
       return item
@@ -16,7 +16,8 @@ const Button = ({children, href, type, icon, rounded, size, color, disabled, ...
       (type ? ' ' + type : '') +
       (rounded ? ' rounded' : '') +
       (size ? ' ' + size : '') +
-      (color ? ' text-' + color : '');
+      (color ? ' text-' + color : '') +
+      (block ? ' w-full' : '');
   }
   if (emptyCheck(href)) {
     return (
