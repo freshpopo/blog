@@ -4,6 +4,8 @@ import {Badge, Diamond} from "components/common";
 import ToastEditor from "../../components/plugin/ToastEditor";
 import BlogListItem from "../../components/blog/BlogListItem";
 
+import Auth from "hoc/auth";
+
 const BlogDetailPage = () => {
   let initContent = '';
   let list = [];
@@ -75,4 +77,4 @@ const BlogDetailPage = () => {
   )
 }
 
-export default BlogDetailPage;
+export default Auth(BlogDetailPage, null);

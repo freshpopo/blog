@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
 import {Badge, Diamond, InputText} from "components/common";
 import ToastEditor from "../../components/plugin/ToastEditor";
+import Auth from "hoc/auth";
 
 
 const BlogCreatePage = () => {
@@ -61,4 +62,4 @@ const BlogCreatePage = () => {
   )
 }
 
-export default BlogCreatePage;
+export default Auth(BlogCreatePage, true);

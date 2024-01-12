@@ -2,6 +2,7 @@ import React from "react";
 import {NavLink, Outlet} from "react-router-dom";
 import 'assets/scss/pages/template.scss';
 import {Diamond} from "components/common";
+import Auth from "hoc/auth";
 
 
 const TemplatePage = () => {
@@ -50,4 +51,4 @@ const TemplatePage = () => {
   )
 }
 
-export default TemplatePage;
+export default Auth(TemplatePage, null);

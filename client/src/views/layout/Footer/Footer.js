@@ -7,15 +7,14 @@ import {useNavigate} from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
-  const userInfo = useSelector(state => state.user);
-  console.log('Footer : ', userInfo.loginSuccess);
+  const userInfo = useSelector(state => state.user.userData);
   const nowYear = () => {
     const _date = new Date();
     return _date.getFullYear();
   }
 
   const userAction = () => {
-    if (userInfo.loginSuccess) {
+    if (userInfo.isAuth) {
       // TODO Toast 컴포넌트 작업 후 토스트 컴포넌트 띄우기
       axios.get('/api/users/logout')
         .then(response => {

@@ -3,6 +3,7 @@ import 'assets/scss/pages/blog.scss';
 import {Diamond, Badge} from "components/common";
 import {NavLink} from "react-router-dom";
 import BlogListItem from "components/blog/BlogListItem";
+import Auth from "hoc/auth";
 
 const BlogListPage = () => {
   let list = [];
@@ -64,4 +65,4 @@ const BlogListPage = () => {
   )
 }
 
-export default BlogListPage;
+export default Auth(BlogListPage, null);
