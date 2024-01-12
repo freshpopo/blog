@@ -1,4 +1,3 @@
-import React from "react";
 import 'assets/scss/pages/blog.scss';
 import {Diamond, Badge} from "components/common";
 import {NavLink} from "react-router-dom";

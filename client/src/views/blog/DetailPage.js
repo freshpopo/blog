@@ -1,4 +1,3 @@
-import React from "react";
 import {NavLink} from "react-router-dom";
 import {Badge, Diamond} from "components/common";
 import ToastEditor from "../../components/plugin/ToastEditor";

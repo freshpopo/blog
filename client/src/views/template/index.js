@@ -1,4 +1,3 @@
-import React from "react";
 import {NavLink, Outlet} from "react-router-dom";
 import 'assets/scss/pages/template.scss';
 import {Diamond} from "components/common";

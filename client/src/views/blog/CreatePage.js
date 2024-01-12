@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import {useRef} from "react";
 import {Badge, Diamond, InputText} from "components/common";
 import ToastEditor from "../../components/plugin/ToastEditor";
 import Auth from "hoc/auth";

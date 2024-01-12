@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import {emptyCheck} from "../../utils/utils";
 import shortId from "shortid";
 import 'assets/scss/components/common/input.scss';

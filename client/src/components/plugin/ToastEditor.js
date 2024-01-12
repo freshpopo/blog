@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 
 // Toast Editor
 import "@toast-ui/editor/dist/toastui-editor.css";

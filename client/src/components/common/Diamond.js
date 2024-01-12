@@ -1,4 +1,3 @@
-import React from "react";
 import 'assets/scss/components/common/diamond.scss';
 
 const Diamond = ({workType, size, active, thickness, filled}) => {

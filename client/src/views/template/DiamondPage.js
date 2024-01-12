@@ -1,4 +1,3 @@
-import React from "react";
 import {Diamond} from "components/common";
 
 const TemplateDiamondPage = () => {

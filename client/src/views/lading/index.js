@@ -1,4 +1,3 @@
-import React from "react";
 import Auth from "hoc/auth";
 
 const LadingPage = () => {

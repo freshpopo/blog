@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import 'assets/scss/components/common/badge.scss';
 
 const Badge = ({children, size, active, disabled, view}) => {

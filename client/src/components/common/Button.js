@@ -1,4 +1,3 @@
-import React from "react";
 import 'assets/scss/components/common/button.scss';
 import {emptyCheck} from "../../utils/utils";
 
