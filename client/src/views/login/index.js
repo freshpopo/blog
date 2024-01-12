@@ -67,6 +67,7 @@ function LoginPage() {
         <Button
           type="fill"
           block
+          disabled={!Email || !Password}
         >Login</Button>
       </form>
     </div>

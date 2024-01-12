@@ -26,7 +26,7 @@ const Auth = function (SpecificComponent, option, adminRoute = null) {
               // TODO 페이지 접속 권한이 없을 때 toast 안내
               navigate('/');
             } else {
-              console.log('Blog List 추적 : ',response, option);
+              console.log('로그인 인증 : ',response, option);
               if (option === false) {
                 navigate('/');
               }

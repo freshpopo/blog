@@ -36,7 +36,8 @@ function RegisterPage() {
       .then(response => {
         if (response.payload.success) {
           // TODO Toast 컴포넌트 작업 후 토스트 컴포넌트 띄우기
-          navigate('/');
+          alert('회원가입이 완료되었습니다.');
+          navigate('/login');
         } else {
           alert("회원가입에 실패하였습니다.");
         }
@@ -87,6 +88,7 @@ function RegisterPage() {
         <Button
           type="fill"
           block
+          disabled={!Email || !Name || !Password || !ConfirmPassword}
         >
           Register
         </Button>

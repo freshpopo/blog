@@ -43,6 +43,7 @@ const InputText = ({label, required, error, success, size, message, onChange, ..
           value={inputValue}
           disabled={props.disabled}
           required={props.required}
+          autoComplete={props.autoComplete ? 'on' : 'off'}
           onChange={changeHandler}
         />
       </div>
