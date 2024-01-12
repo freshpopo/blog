@@ -19,7 +19,8 @@ import TemplateDiamondPage from "views/template/DiamondPage";
 import TemplateBadgePage from "views/template/BadgePage";
 import TemplateButtonPage from "views/template/ButtonPage";
 import TemplateInputTextPage from "views/template/InputTextPage";
-import LoginPage from "./views/login";
+import LoginPage from "views/login";
+import RegisterPage from "views/register";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path='input' element={<TemplateInputTextPage/>}></Route>
           </Route>
           <Route path='login' element={<LoginPage/>}></Route>
+          <Route path='register' element={<RegisterPage/>}></Route>
         </Routes>
       </div>
       <Footer></Footer>
