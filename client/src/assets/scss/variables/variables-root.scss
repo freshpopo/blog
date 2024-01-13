@@ -1,0 +1,59 @@
+@import 'colors';
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  // colors
+  --primary : #{$primary};
+  --secondary : #{$secondary};
+  --info : #{$info};
+  --success: #{$success};
+  --warning: #{$warning};
+  --error: #{$error};
+
+  --hologram-100: #{$hologram-100};
+  --hologram-200: #{$hologram-200};
+  --hologram-300: #{$hologram-300};
+  --hologram-400: #{$hologram-400};
+  --hologram-500: #{$hologram-500};
+
+  --cream-50: #{$cream-50};
+  --cream-100: #{$cream-100};
+  --cream-200: #{$cream-200};
+  --cream-300: #{$cream-300};
+  --cream-400: #{$cream-400};
+  --cream-500: #{$cream-500};
+  --cream-600: #{$cream-600};
+  --cream-700: #{$cream-700};
+  --cream-800: #{$cream-800};
+  --cream-900: #{$cream-900};
+  --cream-1000: #{$cream-1000};
+
+  // colors-rgb
+  --primary-RGB : #{hexToRGB($primary)};
+  --secondary-RGB : #{hexToRGB($secondary)};
+  --info-RGB : #{hexToRGB($info)};
+  --success-RGB: #{hexToRGB($success)};
+  --warning-RGB: #{hexToRGB($warning)};
+  --error-RGB: #{hexToRGB($error)};
+
+  --hologram-100-RGB: #{hexToRGB($hologram-100)};
+  --hologram-200-RGB: #{hexToRGB($hologram-200)};
+  --hologram-300-RGB: #{hexToRGB($hologram-300)};
+  --hologram-400-RGB: #{hexToRGB($hologram-400)};
+  --hologram-500-RGB: #{hexToRGB($hologram-500)};
+
+  --cream-50-RGB: #{hexToRGB($cream-50)};
+  --cream-100-RGB: #{hexToRGB($cream-100)};
+  --cream-200-RGB: #{hexToRGB($cream-200)};
+  --cream-300-RGB: #{hexToRGB($cream-300)};
+  --cream-400-RGB: #{hexToRGB($cream-400)};
+  --cream-500-RGB: #{hexToRGB($cream-500)};
+  --cream-600-RGB: #{hexToRGB($cream-600)};
+  --cream-700-RGB: #{hexToRGB($cream-700)};
+  --cream-800-RGB: #{hexToRGB($cream-800)};
+  --cream-900-RGB: #{hexToRGB($cream-900)};
+  --cream-1000-RGB: #{hexToRGB($cream-1000)};
+}
