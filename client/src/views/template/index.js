@@ -21,6 +21,10 @@ const TemplatePage = () => {
     {
       path: 'input',
       name: 'Input',
+    },
+    {
+      path: 'toast-dialog',
+      name: 'Toast & Dialog',
     }
   ];
   return (

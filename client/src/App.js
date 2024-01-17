@@ -19,6 +19,7 @@ import TemplateDiamondPage from "views/template/DiamondPage";
 import TemplateBadgePage from "views/template/BadgePage";
 import TemplateButtonPage from "views/template/ButtonPage";
 import TemplateInputTextPage from "views/template/InputTextPage";
+import TemplateToastDialogPage from "views/template/ToastDialogPage";
 import LoginPage from "views/login";
 import RegisterPage from "views/register";
 
@@ -40,6 +41,7 @@ function App() {
             <Route path='badge' element={<TemplateBadgePage/>}></Route>
             <Route path='button' element={<TemplateButtonPage/>}></Route>
             <Route path='input' element={<TemplateInputTextPage/>}></Route>
+            <Route path='toast-dialog' element={<TemplateToastDialogPage/>}></Route>
           </Route>
           <Route path='login' element={<LoginPage/>}></Route>
           <Route path='register' element={<RegisterPage/>}></Route>

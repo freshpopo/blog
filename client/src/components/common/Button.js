@@ -1,7 +1,7 @@
 import 'assets/scss/components/common/button.scss';
 import {emptyCheck} from "../../utils/utils";
 
-const Button = ({children, href, type, icon, rounded, size, color, disabled, block, ...props}) => {
+const Button = ({children, href, type, icon, rounded, size, color, disabled, block, onClick, ...props}) => {
   function childrenTag(item) {
     if (emptyCheck(item.props)) {
       return item
@@ -27,6 +27,7 @@ const Button = ({children, href, type, icon, rounded, size, color, disabled, blo
           (disabled ? ' disabled' : '')
         }
         target={props.target}
+        onClick={onClick}
       >
         {childrenTag(children)}
       </a>
@@ -36,6 +37,7 @@ const Button = ({children, href, type, icon, rounded, size, color, disabled, blo
       <button
         className={classList()}
         disabled={disabled}
+        onClick={onClick}
       >
         {childrenTag(children)}
       </button>
