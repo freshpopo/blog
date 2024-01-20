@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import { auth } from '_actions/user_action';
+import { auth } from '_reducers/store';
 import {useNavigate} from "react-router-dom";
 const Auth = function (SpecificComponent, option, adminRoute = null) {
   // null => 아무나 출입이 가능한 페이지
@@ -14,7 +14,7 @@ const Auth = function (SpecificComponent, option, adminRoute = null) {
     useEffect(() => {
       dispatch(auth())
         .then(response => {
-          if(!response.payload.isAuth) {
+          if(!response.isAuth) {
             // 로그인 하지 않은 상태
             if (option) {
               navigate('/login');
@@ -22,7 +22,7 @@ const Auth = function (SpecificComponent, option, adminRoute = null) {
           } else {
             // 로그인한 상태
 
-            if (adminRoute && !response.payload.isAdmin) {
+            if (adminRoute && !response.isAdmin) {
               // TODO 페이지 접속 권한이 없을 때 toast 안내
               navigate('/');
             } else {

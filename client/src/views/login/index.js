@@ -1,7 +1,7 @@
 import {Button, Diamond, InputText} from "components/common";
 import 'assets/scss/pages/login.scss';
 import {useState} from "react";
-import { loginUser } from '_actions/user_action';
+import { loginUser } from '_reducers/store';
 import { useDispatch } from "react-redux";
 import {useNavigate} from "react-router-dom";
 import Auth from "hoc/auth";

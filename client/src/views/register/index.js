@@ -3,7 +3,7 @@ import 'assets/scss/pages/login.scss';
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {registerUser} from "_actions/user_action";
+import {registerUser} from "_reducers/store";
 import Auth from "hoc/auth";
 
 function RegisterPage() {

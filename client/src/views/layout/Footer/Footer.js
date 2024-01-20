@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
-  const userInfo = useSelector(state => state.user.userData);
+  const userInfo = useSelector((state) => state.userData);
   const nowYear = () => {
     const _date = new Date();
     return _date.getFullYear();
